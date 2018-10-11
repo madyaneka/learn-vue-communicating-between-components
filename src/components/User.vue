@@ -16,7 +16,8 @@
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit
                     :userAge="age"
-                    @ageWasEdited="age = $event"></app-user-edit>
+                    @ageWasEdited="age = $event"
+                    :editAgeFn="editAge"></app-user-edit>
             </div>
         </div>
     </div>
@@ -40,6 +41,9 @@
             },
             resetName() {
                 this.name = 'Madyan'
+            },
+            editAge() {
+                this.age = '20'
             }
         },
 

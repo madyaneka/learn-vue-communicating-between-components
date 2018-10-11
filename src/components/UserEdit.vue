@@ -4,12 +4,16 @@
         <p>Edit me!</p>
         <p>User age: {{ userAge }}</p>
         <button @click="editAge">Edit age</button>
+        <button @click="editAgeFn">Edit age</button>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['userAge'],
+    props: {
+        userAge: [Number, String],
+        editAgeFn: Function
+    },
 
     methods: {
         editAge() {

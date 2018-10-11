@@ -17,7 +17,7 @@ export default {
             default: 'Madyan'
         },
         resetFn: Function,
-        userAge: Number
+        userAge: [Number, String]
     },
 
     methods: {
