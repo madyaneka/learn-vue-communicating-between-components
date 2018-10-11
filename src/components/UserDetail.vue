@@ -8,9 +8,12 @@
 
 <script>
 export default {
-    props: [
-        'myName'
-    ],
+    props: {
+        myName: {
+            type: String,
+            default: 'Madyan'
+        }
+    },
 
     methods: {
         switchName() {
