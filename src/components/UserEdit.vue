@@ -4,21 +4,24 @@
         <p>Edit me!</p>
         <p>User age: {{ userAge }}</p>
         <button @click="editAge">Edit age</button>
-        <button @click="editAgeFn">Edit age</button>
+        <!-- <button @click="editAgeFn">Edit age</button> -->
     </div>
 </template>
 
 <script>
+import { eventBus } from '../main.js'
+
 export default {
     props: {
         userAge: [Number, String],
-        editAgeFn: Function
+        // editAgeFn: Function
     },
 
     methods: {
         editAge() {
             this.userAge = 20
-            this.$emit('ageWasEdited', this.userAge)
+            // this.$emit('ageWasEdited', this.userAge)
+            eventBus.$emit('ageWasEdited', this.userAge)
         }
     }
 }
